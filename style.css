@@ -6,7 +6,8 @@
   
   body {
     font-family: 'Segoe UI', sans-serif;
-    background:url(img/bg.jpg);
+    background-image: url(img/bg2.png);
+    background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
     text-align: center;
