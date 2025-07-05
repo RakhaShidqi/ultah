@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selamat Ulang Tahun Sayang!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">💖 Selamat Ulang Tahun Sayangkuu 💖</h1>
+
+    <!-- Kotak Hadiah -->
+    <div class="gift-box" onclick="openGift()">
+      <div class="lid"></div>
+      <div class="box"></div>
+      <div class="ribbon"></div>
+      <p class="click-text">Klik untuk membuka 🎁</p>
+    </div>
+
+    <!-- Pesan Cinta -->
+    <p class="typewriter hidden" id="message"></p>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+  <audio id="bg-music" src="music.mp3" autoplay loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>

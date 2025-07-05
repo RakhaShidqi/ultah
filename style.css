@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background:url(img/bg.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+  }
+  
+  .typewriter {
+    font-size: 1.4rem;
+    width: 80%;
+    margin: 0 auto;
+    border-right: 3px solid rgba(255,255,255,0.75);
+    white-space: prewrap;
+    overflow: hidden;
+    animation: typing 8s steps(60, end), blink .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: rgba(255,255,255,0.75); }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  
+  #confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  /* Tambahan di bawah style sebelumnya */
+
+.gift-box {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 40px auto;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+  }
+  
+  .lid {
+    width: 120px;
+    height: 30px;
+    background: #ff6f91;
+    position: absolute;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+    z-index: 2;
+  }
+  
+  .box {
+    width: 120px;
+    height: 90px;
+    background: #ff9671;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .ribbon {
+    width: 20px;
+    height: 120px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    border-radius: 5px;
+  }
+  
+  .click-text {
+    margin-top: 140px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Ketika hadiah dibuka */
+  .opened .lid {
+    animation: lid-open 0.6s forwards;
+  }
+  
+  @keyframes lid-open {
+    to {
+      transform: rotateX(80deg) translateY(-60px);
+      transform-origin: top center;
+    }
+  }
+  
